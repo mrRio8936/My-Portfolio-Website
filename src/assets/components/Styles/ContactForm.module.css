@@ -1,0 +1,99 @@
+.contactFormContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: transparent;
+    font-family: 'Courier New', Courier, monospace;
+  }
+  
+  .contactForm {
+    width: 80%;
+    max-width: 500px;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border: 2px solid transparent;
+    
+    position: relative;
+    transition: all 0.3s ease;
+    background: linear-gradient(135deg, #232526, #414345);
+    color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  }
+  
+  .contactForm:hover {
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+  }
+  
+  .formTitle {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 10px;
+
+  }
+  
+  .inputGroup {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+  
+  .inputGroup label {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    margin-bottom: 8px;
+    color: #fff;
+  }
+  
+  .inputGroup .icon {
+    margin-right: 10px;
+    color: #32cd32;
+  }
+  
+  .inputField,
+  .textareaField {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+  }
+  
+  .inputField:focus,
+  .textareaField:focus {
+    outline: none;
+    border: 2px solid #32cd32;
+    box-shadow: 0 0 5px rgba(50, 205, 50, 0.7);
+  }
+  
+  .textareaField {
+    height: 150px;
+    resize: none;
+  }
+  
+  .submitButton {
+    width: 100%;
+    padding: 12px;
+    background-color: #32cd32;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    color: white;
+    transition: all 0.3s ease;
+  }
+  
+  .submitButton:hover {
+    background-color: #28a745;
+    transform: translateY(-2px);
+  }
+  
+  .submitButton:active {
+    background-color: #218838;
+    transform: translateY(2px);
+  }
+  

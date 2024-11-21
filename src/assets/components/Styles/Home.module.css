@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Doto:wght@100..900&family=Edu+AU+VIC+WA+NT+Pre:wght@400..700&display=swap');
+
+/* Container styling */
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 60vh;
+  padding: 10px;
+  margin-top: 30px;
+  padding: 0 20px; /* Reduced padding for better fit */
+  background-color: transparent; /* Dark background */
+  color: #ffffff; /* White text */
+  /* margin-bottom: 0px; */
+  /* width: 100%;  */
+}
+
+/* Small intro text */
+.introText {
+  font-size: 1.7rem; /* Small font size */
+  color: white;
+  margin-bottom: 10px;
+  font-family: 'Pacifico', cursive;
+}
+
+/* Big name */
+.name {
+  font-size: 5rem; /* Large font size */
+  font-weight: bold;
+  margin: 0;
+  color: #cccccc;
+  line-height: 1.1; /* Adjust line-height to prevent overlap */
+  word-wrap: break-word; /* Ensures no word overflows */
+}
+
+/* Big tagline */
+.tagline {
+  font-size: 4rem; /* Big font size */
+  font-weight: 500;
+  color: #32cd32;
+  margin: 20px 0;
+  font-family: 'Pacifico', cursive;
+  border-radius: 10px;
+  line-height: 1.1; /* Adjust line-height for proper spacing */
+  word-wrap: break-word; /* Ensures no word overflows */
+}
+
+/* Small description */
+.description {
+  font-size: 16px; /* Small font size */
+  line-height: 1.6; /* Better readability */
+  max-width: 800px;
+  color: #ffffff;
+  margin-bottom: 30px;
+  font-weight: bold;
+  font-family: 'Courier New', Courier, monospace;
+  padding: 0 10px; /* Add padding to avoid text touching edges on mobile */
+}
+
+/* Explore button */
+.exploreButton {
+  font-size: 18px;
+  text-decoration: none;
+  background: -webkit-linear-gradient(to right, #ff416c, #ff4b2b); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #ff416c, #ff4b2b);
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  width: fit-content;
+  cursor: pointer;
+  box-shadow: 0 5px #363736;
+  transition: all 0.2s ease;
+  font-family: "Edu AU VIC WA NT Pre", cursive;
+}
+
+/* Button hover effect */
+.exploreButton:hover {
+  box-shadow: 0 7px #363736;
+  transform: translateY(-2px);
+}
+
+/* Button active effect */
+.exploreButton:active {
+  transform: translateY(3px);
+}
+
+/* For smaller screens */
+@media(max-width: 768px) {
+  .name {
+    font-size: 3rem; /* Smaller font size for mobile */
+    line-height: 1.2; /* Prevent name from overlapping */
+    /* text-align: center;  */
+  }
+
+  .tagline {
+    font-size: 2.5rem; /* Reduce tagline size */
+    margin: 10px 0;
+    /* text-align: center;  */
+  }
+
+  .description {
+    font-size: 1rem; /* Smaller description text */
+    margin-bottom: 20px; /* More space between elements */
+    /* text-align: center;  */
+  }
+
+  .container {
+    margin-bottom: 120px;
+    padding: 10px; /* Reduced padding for mobile */
+    width: 100%; /* Ensure container takes full width */
+  }
+
+  /* Adjust button size */
+  .exploreButton {
+    font-size: 14px;
+    padding: 8px 15px;
+  }
+
+  /* Prevent text and elements from overflowing on small screens */
+  .description, .introText, .tagline, .name {
+    word-wrap: break-word; /* Ensure long words break and fit within the container */
+    width: 100%; /* Ensure text doesn't overflow */
+  }
+}

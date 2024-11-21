@@ -1,0 +1,179 @@
+/* Navbar container */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: .1px 30px;
+  background-color:transparent;
+  position: relative;
+  z-index: 1000;
+  margin-top:10px;
+  margin-left: 10px;
+  margin-right: 10px;
+
+}
+
+
+
+
+
+
+/* Logo styling */
+.logo {
+  display: flex;
+  align-items: center;
+}
+.logo:hover{
+  transform: scale(1.02);
+  
+}
+.logoImage {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* Hamburger icon */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  border-radius: 2px;
+  transition: transform 0.3s;
+}
+.hamburger.open .bar:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+.hamburger.open .bar:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.open .bar:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+/* Nav links */
+.navLinks {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  /* position: relative; */
+  transition: transform 0.3s ease, color 0.3s ease;
+  
+}
+.navLinks a:hover {
+  color: #32cd32;
+  transform: scale(1.3);
+
+}
+
+
+.navLinks a::after {
+  content: ""; /* Empty content for the line effect */
+  position: absolute;
+  left: 0;
+  bottom: -5px; /* Below the text */
+  width: 100%;
+  height: 2px;
+  background-color: #a9a9a9; /* Line color */
+  transform: scaleX(0); /* Initially hidden */
+  transition: transform 0.3s ease;
+  transform-origin:right; /* Animation starts from the right */
+}
+
+.navLinks a:hover::after {
+  transform: scaleX(1); /* Full-width line on hover */
+  transform-origin: left; /* Animation flows to the left */
+}
+.navLinks ul {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+.navLinks li a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+
+
+/* Base styles for the Contact button */
+.contactLink a {
+  text-decoration: none;
+  background: #232526; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #232526, #414345); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #232526, #414345);
+  /* background-image: linear-gradient(to right, #5ab8b2 0%, #669b9c  51%, #6e7070  100%); */
+  color: white; /* Text color */
+  font-size: 16px; /* Font size */
+  font-weight: bold; /* Bold text */
+  padding: 10px 20px; /* Spacing inside the button */
+  border: none; /* No border */
+  border-radius: 8px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  box-shadow: 0 5px #363736; /* Creates the 3D shadow */
+  transition: all 0.2s ease; /* Smooth transition for interactions */
+}
+
+
+
+
+/* Hover effect */
+.contactLink a:hover {
+  box-shadow: 0 7px #363736; /* Slightly increase shadow depth */
+  transform: translateY(-2px); /* Moves button up */
+}
+
+/* Pressed effect */
+.contactLink:active {
+  box-shadow: 0 2px #363736; /* Reduces shadow for pressed effect */
+  transform: translateY(4px); /* Moves button down */
+}
+
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+
+  .navLinks {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.2);
+    width: auto;
+    flex-direction: column;
+    gap: 20px;
+    padding: 40px 40px;
+    transform: translateY(-100%);
+    transition: transform 0.3s ease;
+    visibility: hidden;
+    border: 1px solid white;
+    border-radius: 10px;
+  }
+
+  .showMenu {
+    transform: translateY(0);
+    visibility: visible;
+  }
+
+  .navLinks ul {
+    flex-direction: column;
+  }
+  .contactLink{
+    margin-top:20px;
+  }
+}

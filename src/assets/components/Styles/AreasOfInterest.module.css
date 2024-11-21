@@ -1,0 +1,180 @@
+/* Container */
+.interestContainer {
+    padding: 40px 30px;
+    text-align: center;
+    background-color: transparent;
+    color: #ffffff;
+    margin-top: 150px;
+    font-family: 'Courier New', Courier, monospace;
+    border-radius: 10px;
+    opacity: 0;
+    transform: translateY(20px); /* Hidden initially */
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+  }
+  
+  /* Fade-in effect */
+  .fadeIn {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  /* Title styling */
+  .title {
+    font-size: 3.5rem;
+    margin-bottom: 5px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #32cd32;
+  }
+  
+  /* Subtitle styling */
+  .subtitle {
+    font-size: 1rem;
+    margin-bottom: 50px;
+    color: #cccccc;
+    white-space: nowrap; /* Prevent wrapping for typewriter effect */
+    overflow: hidden;
+    border-right: 2px solid transparent; /* Default state */
+    display: inline-block;
+    word-wrap: break-word;
+  }
+  
+  /* Typewriter effect */
+  .typewriter {
+    animation: typing 3s steps(40, end), blink 0.5s step-end infinite alternate;
+    border-right: 2px solid #32cd32;
+  }
+  
+  /* Grid layout */
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+  }
+  
+  /* Individual card styling */
+  .card {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+  }
+  
+  /* Icon styling */
+  .icon {
+    font-size: 3rem;
+    color: #32cd32;
+    margin-bottom: 15px;
+  }
+  
+  /* Card title */
+  .cardTitle {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #ffffff;
+  }
+  
+  /* Card description */
+  .cardDescription {
+    font-size: 1rem;
+    color: #cccccc;
+  }
+  
+  /* Keyframes for fade-in-up animation */
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Keyframes for typewriter effect */
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  }
+  
+  /* Blinking cursor animation */
+  @keyframes blink {
+    from {
+      border-right-color: transparent;
+    }
+    to {
+      border-right-color: #32cd32;
+    }
+  }
+  
+  /* For small screens */
+  @media (max-width: 768px) {
+    .interestContainer {
+      padding: 20px; /* Reduced padding for small screens */
+      margin-top: 100px; /* Reduced margin on small screens */
+    }
+  
+    .title {
+      font-size: 2.5rem; /* Slightly smaller title for mobile */
+    }
+  
+    .subtitle {
+      font-size: 1rem; /* Adjust subtitle size for mobile */
+      margin-bottom: 30px; 
+      word-wrap: break-word;
+    }
+  
+    .grid {
+      grid-template-columns: 1fr 1fr; /* 2 cards per row on small screens */
+      gap: 20px; /* Smaller gap between cards */
+    }
+  
+    .card {
+      padding: 15px; /* Smaller padding for cards */
+      transition: transform 0.2s ease, box-shadow 0.2s ease; /* Faster transition */
+    }
+  
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Smaller hover effect */
+    }
+  }
+  
+  /* For extra small screens */
+  @media (max-width: 480px) {
+    .title {
+      font-size: 2rem; /* Further reduction for very small screens */
+    }
+  
+    .subtitle {
+      font-size: 0.9rem; /* Smaller subtitle on tiny screens */
+      margin-bottom: 20px; 
+      word-wrap: break-word;
+    }
+  
+    .grid {
+      grid-template-columns: 1fr; /* Stack cards on extra small screens */
+      gap: 15px; /* Smaller gap between cards */
+    }
+  
+    .card {
+      padding: 10px; /* Further reduce padding */
+    }
+  }
+  

@@ -1,0 +1,38 @@
+/* Container for the social media icons, sticky to the right */
+.socialContainer {
+    position: fixed;
+  top: 50%;
+  right: 0; /* Attach it to the right edge */
+  transform: translateY(-50%); /* Vertically center the icons */
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* Space between icons */
+  z-index: 1000; /* Ensure it's on top of other content */
+  background-color: transparent;
+  padding: 10px; /* Add some padding around the icons */
+    gap: 15px; /* Space between icons */
+    z-index: 100; /* Ensure it's on top of other content */
+  }
+  
+  /* Styling for the individual social icons */
+  .icon {
+    font-size: 30px;
+    color: #ffffff;
+    background-color: #333333;
+    border-radius: 50%;
+    padding: 15px;
+    transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  /* Hover effect - icon scaling and color change */
+  .icon:hover {
+    transform: scale(1.2); /* Scale up on hover */
+    background-image: linear-gradient(to right, #93b2b0 0%, #556270  51%, #636565 100%);
+    /* Change background color */
+    color: #ffffff; /* Keep icon color white */
+  }
+  
+  .icon:active {
+    transform: scale(0.9); /* Slightly shrink when clicked */
+  }
+  
