@@ -1,0 +1,15 @@
+[build]
+  # The base directory for the site build
+  base = "/"
+
+  # The directory where your built files are located
+  publish = "build"
+
+  # The build command to run
+  command = "npm run build"
+
+[[redirects]]
+  from = "/"
+  to = "/index.html"
+  status = 200
+  force = true
